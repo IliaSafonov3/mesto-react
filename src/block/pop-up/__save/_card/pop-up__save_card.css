@@ -1,0 +1,14 @@
+@media screen and (min-width: 320px){
+    .pop-up__save_card{
+    width: 200px;
+    height: 40px;
+    margin-top: 16px;
+    }
+}
+@media screen and (min-width: 980px){
+    .pop-up__save_card{
+        width: 358px;
+        height: 50px;
+        margin-top: 18px;
+    }
+}

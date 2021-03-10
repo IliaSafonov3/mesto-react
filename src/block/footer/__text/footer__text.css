@@ -1,0 +1,17 @@
+.footer__text{
+    font-weight: 400;
+    font-style: normal;
+    color: #545454;
+}
+@media screen and (min-width: 320px){
+    .footer__text{
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+@media screen and (min-width: 650px){
+    .footer__text{
+        font-size: 18px;
+        line-height: 22px;
+    }
+}

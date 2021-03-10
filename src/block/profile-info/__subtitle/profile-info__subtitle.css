@@ -1,0 +1,31 @@
+.profile-info__subtitle{
+    color: white;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (min-width: 320px){
+    .profile-info__subtitle{
+        font-size: 14px;
+        line-height: 17px;
+        margin: 14px auto 36px;
+        max-width: 282px;
+    }
+}
+@media screen and (min-width: 650px){
+    .profile-info__subtitle{
+        font-size: 18px;
+        line-height: 22px;
+        margin: 16px 0 0 0;
+        max-width: 336px;
+    }
+}
+@media screen and (min-width: 950px){
+    .profile-info__subtitle{
+        max-width: 526px;
+        text-align: left;
+        display: flex;
+        justify-content: left;
+    }
+}

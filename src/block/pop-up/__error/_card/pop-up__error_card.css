@@ -1,0 +1,10 @@
+@media screen and (min-width: 320px){
+    .pop-up__error_card{
+    width: 200px;
+    }
+}
+@media screen and (min-width: 980px){
+    .pop-up__error_card{
+        width: 358px;
+    }
+}

@@ -1,0 +1,23 @@
+.elements{
+    display: grid;
+    gap: 20px 17px;
+    margin-top: 36px;
+    grid-auto-rows: 361px;
+}
+@media screen and (min-width: 320px){
+    .elements{
+        grid-template-rows: repeat(6,361px);
+    }
+}
+@media screen and (min-width: 650px){
+    .elements{
+        grid-template-columns: repeat(2,282px);
+        grid-template-rows: repeat(3,361px);
+    }
+}
+@media screen and (min-width: 980px){
+    .elements{
+        grid-template-columns: repeat(3,282px);
+        grid-template-rows: repeat(2,361px);
+    }
+}
