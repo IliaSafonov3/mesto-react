@@ -1,0 +1,11 @@
+.element__rectangle{
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 42px);
+    min-height: 29px;
+    margin-right: auto;
+    margin-left: auto;
+    align-items: center;
+    margin-top: 22px;
+    justify-content:space-between;
+}

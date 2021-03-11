@@ -1,0 +1,18 @@
+@media screen and (min-width: 320px){
+    .pop-up__close_image{
+        width: 30px;
+        height: 30px;
+        top:-30px;
+        right: -30px;
+        background-size: 30px 30px;
+    }
+}
+@media screen and (min-width: 980px){
+    .pop-up__close_image{
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+        top:-40px;
+        right: -40px;
+    }
+}
