@@ -9,11 +9,13 @@ function PopupWithForm(props){
 
     return(
         <section  className={`pop-up ${props.isOpened === true ? 'pop-up_opened' : ''}`} id='pop-up-profile'>
-                <div class="pop-up__overlay" onClick={closePopup}></div>
-                <div class="pop-up__container" id='pop-up__container-profile'>
-                    <h2 class="pop-up__text">{props.title}</h2>
+                <div className="pop-up__overlay" onClick={closePopup}></div>
+                <div className="pop-up__container" id='pop-up__container-profile'>
+                    <h2 className="pop-up__text">{props.title}</h2>
+                    <form name="form"  className="pop-up__form"  noValidate>
                         {props.children}
-                    <button onClick={closePopup} type="button" class="pop-up__close" id='pop-up__close-profile'></button>
+                    </form>
+                    <button onClick={closePopup} type="button" className="pop-up__close" id='pop-up__close-profile'></button>
                 </div>
             </section>
     )
