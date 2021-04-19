@@ -21,41 +21,31 @@ class Api {
     return fetch(`${this._cardsUrl}likes/${cardId}`, {
       method: "PUT",
       headers: { authorization: this._authorization },
-    })
-      .then(this._handleResponse)
-      .catch(this._handleResponseError);
+    }).then(this._handleResponse);
   }
   deleteLike(cardId) {
     return fetch(`${this._cardsUrl}likes/${cardId}`, {
       headers: { authorization: this._authorization },
       method: "DELETE",
-    })
-      .then(this._handleResponse)
-      .catch(this._handleResponseError);
+    }).then(this._handleResponse);
   }
   deleteCard(cardId) {
     return fetch(`${this._cardsUrl}${cardId}`, {
       headers: { authorization: this._authorization },
       method: "DELETE",
-    })
-      .then(this._handleResponse)
-      .catch(this._handleResponseError);
+    }).then(this._handleResponse);
   }
   getInitialCards() {
     return fetch(this._cardsUrl, {
       headers: { authorization: this._authorization },
       method: "GET",
-    })
-      .then(this._handleResponse)
-      .catch(this._handleResponseError);
+    }).then(this._handleResponse);
   }
   getUserInfo() {
     return fetch(this._userUrl, {
       headers: { authorization: this._authorization },
       method: "GET",
-    })
-      .then(this._handleResponse)
-      .catch(this._handleResponseError);
+    }).then(this._handleResponse);
   }
 
   addCard(obj) {
@@ -69,9 +59,7 @@ class Api {
         name: obj.name,
         link: obj.link,
       }),
-    })
-      .then(this._handleResponse)
-      .catch(this._handleResponseError);
+    }).then(this._handleResponse);
   }
   setProfile(obj) {
     return fetch(this._userUrl, {
@@ -84,9 +72,7 @@ class Api {
         name: obj.name,
         about: obj.about,
       }),
-    })
-      .then(this._handleResponse)
-      .catch(this._handleResponseError);
+    }).then(this._handleResponse);
   }
   setAvatar(obj) {
     return fetch(`${this._userUrl}/avatar`, {
@@ -98,9 +84,7 @@ class Api {
       body: JSON.stringify({
         avatar: obj.avatar,
       }),
-    })
-      .then(this._handleResponse)
-      .catch(this._handleResponseError);
+    }).then(this._handleResponse);
   }
 }
 
@@ -110,4 +94,4 @@ const api = new Api({
   userUrl: "https://mesto.nomoreparties.co/v1/cohort-20/users/me",
 });
 
-export default api
+export default api;

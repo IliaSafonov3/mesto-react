@@ -10,6 +10,7 @@ function App(props) {
  const [selectedCard, setSelectedCard] = React.useState({
      isImagePopupOpen:false,
      imagePopupSource:'',
+     imagePopupName:'',
  })
  const [isOpenedAvatar,setIsOpenedAvatar]= React.useState(false)
  const [isOpenedProfile, setIsOpenedProfile] = React.useState(false)
