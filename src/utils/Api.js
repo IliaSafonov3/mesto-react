@@ -16,19 +16,32 @@ class Api {
     console.log("_handleResponseError");
     return console.log(err);
   }
+  changeLikeCardStatus(id,isLiked){
+    if (isLiked){
+      return fetch(`${this._cardsUrl}likes/${id}`, {
+        method: "PUT",
+        headers: { authorization: this._authorization },
+      }).then(this._handleResponse);
+    }else{
+      return fetch(`${this._cardsUrl}likes/${id}`, {
+        headers: { authorization: this._authorization },
+        method: "DELETE",
+      }).then(this._handleResponse);
+    }
+  }
 
-  addLike(cardId) {
-    return fetch(`${this._cardsUrl}likes/${cardId}`, {
-      method: "PUT",
-      headers: { authorization: this._authorization },
-    }).then(this._handleResponse);
-  }
-  deleteLike(cardId) {
-    return fetch(`${this._cardsUrl}likes/${cardId}`, {
-      headers: { authorization: this._authorization },
-      method: "DELETE",
-    }).then(this._handleResponse);
-  }
+  // addLike(cardId) {
+  //   return fetch(`${this._cardsUrl}likes/${cardId}`, {
+  //     method: "PUT",
+  //     headers: { authorization: this._authorization },
+  //   }).then(this._handleResponse);
+  // }
+  // deleteLike(cardId) {
+  //   return fetch(`${this._cardsUrl}likes/${cardId}`, {
+  //     headers: { authorization: this._authorization },
+  //     method: "DELETE",
+  //   }).then(this._handleResponse);
+  // }
   deleteCard(cardId) {
     return fetch(`${this._cardsUrl}${cardId}`, {
       headers: { authorization: this._authorization },
