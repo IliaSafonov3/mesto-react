@@ -39,15 +39,14 @@ function App(props) {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
     api.changeLikeCardStatus(card._id, !isLiked).then((newCard) => {
       setCards((state) => state.map((c) => (c._id === card._id ? newCard : c)));
-    });
+    }).catch(console.log("error"));
   }
 
   function handleCardDelete(card) {
     api
       .deleteCard(card._id)
       .then(() => {
-        const newCard = cards.filter((item) => item !== card);
-        setCards(newCard);
+        setCards(cards.filter((item) => item._id !== card._id));
       })
       .catch(console.log("error"));
   }
