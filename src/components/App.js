@@ -7,6 +7,7 @@ import api from "../utils/api.js";
 import EditProfilePopup from "./EditProfilePopup";
 import EditAvatarPopup from "./EditAvatarPopup";
 import AddPlacePopup from "./AddPlacePopup";
+import SignUp from "./SignUp"
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function App(props) {
@@ -103,7 +104,11 @@ function App(props) {
   }
 
   return (
+
+
     <CurrentUserContext.Provider value={currentUser}>
+    <SignUp/>
+
       <div className=".page__content">
         <div className="root">
           <Header />

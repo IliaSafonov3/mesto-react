@@ -51,5 +51,13 @@
 @import url('./blocks/pop-up/__image/pop-up__image.css');
 @import url('./blocks/pop-up/__error/pop-up__error.css');
 @import url('./blocks/pop-up/__error/_card/pop-up__error_card.css');
+@import url('./blocks/form/__button/form__button.css');
+@import url('./blocks/form/__input/form__input.css');
+@import url('./blocks/form/__inputs/form__inputs.css');
+@import url('./blocks/form/__link/form__link.css');
+@import url('./blocks/form/__title/form__title.css');
+@import url('./blocks/form/form.css');
+
+
 
 
